@@ -42,6 +42,10 @@ export const Header = () => {
             </animated.div>
           ) : null}
         </div>
+
+        <div className="scroll-down animate-bounce absolute bottom-5 left-1/2 w-10 h-10 bg-green-400 text-white grid place-items-center cursor-pointer rounded-full">
+          <span className="text-2xl">&#8595;</span>
+        </div>
       </header>
     </>
   );

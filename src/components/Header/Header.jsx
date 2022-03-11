@@ -29,11 +29,13 @@ export const Header = () => {
                 Ashik
               </a>
             </div>
-            <button
-              onClick={() => setIsHide((prev) => !prev)}
-              className="z-20 rounded-md text-green-50 text-lg w-10 h-10 bg-green-400"
-            >
-              {isHide ? <>&times;</> : <>&#9776;</>}
+            <button onClick={() => setIsHide((prev) => !prev)} className="z-20">
+              <span class="inline-flex ml-2 w-10 h-10 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex justify-center items-center text-white rounded-full h-10 w-10 bg-green-500 text-lg">
+                  {isHide ? <>&times;</> : <>&#9776;</>}
+                </span>
+              </span>
             </button>
           </nav>
           {isHide ? (

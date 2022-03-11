@@ -31,7 +31,7 @@ export const Header = () => {
             </div>
             <button
               onClick={() => setIsHide((prev) => !prev)}
-              className="humberger z-20 text-green-50 text-lg w-10 h-10 bg-green-400"
+              className="z-20 rounded-md text-green-50 text-lg w-10 h-10 bg-green-400"
             >
               {isHide ? <>&times;</> : <>&#9776;</>}
             </button>

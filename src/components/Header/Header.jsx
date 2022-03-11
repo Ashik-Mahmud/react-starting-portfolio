@@ -1,35 +1,46 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { animated, useSpring } from "react-spring";
+import { Menus } from "./Menus";
 export const Header = () => {
+  const [isHide, setIsHide] = useState(false);
+  const animation = useSpring({
+    config: {
+      duration: 450,
+    },
+    opacity: isHide ? 1 : 0,
+    transform: isHide ? "translateX(0%)" : "translateX(-100%)",
+    position: isHide ? "fixed" : "none",
+    width: "100%",
+    height: "100%",
+    left: "0%",
+    top: "0%",
+  });
+
   return (
     <>
-      <header className="p-4 bg-gray-50 dark:bg-slate-700">
+      <header className="p-3">
         <div className="header-container mx-auto container">
           <nav className="flex justify-between items-center">
             <div className="logo">
               <a
                 href="/"
-                className="text-blue-500 dark:text-gray-50 dark:border-gray-50 dark:shadow-none rounded-sm border font-poppins border-blue-500 py-1 shadow-md shadow-blue-500/25 px-3 block"
+                className="text-xl font-semibold uppercase text-green-400 font-poppins"
               >
-                Logo
+                Ashik
               </a>
             </div>
-            <div className="primary-menu">
-              <ul className="font-poppins flex flex-wrap items-center space-x-10 dark:text-gray-100">
-                <li>
-                  <a href="/" className="text-blue-500 dark:text-lime-400">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="/">About</a>
-                </li>
-                <li>
-                  <a href="/">Users</a>
-                </li>
-              </ul>
-            </div>
+            <button
+              onClick={() => setIsHide((prev) => !prev)}
+              className="humberger z-20 text-green-50 text-lg w-10 h-10 bg-green-400"
+            >
+              {isHide ? <>&times;</> : <>&#9776;</>}
+            </button>
           </nav>
+          {isHide ? (
+            <animated.div style={animation}>
+              <Menus />
+            </animated.div>
+          ) : null}
         </div>
       </header>
     </>

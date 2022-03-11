@@ -1,5 +1,4 @@
 import React from "react";
-import image from "./../../images/1623869589264.png";
 export const Hero = () => {
   return (
     <>
@@ -26,7 +25,10 @@ export const Hero = () => {
               </button>
             </div>
             <div className="image-info sm:w-1/2 grid place-items-center">
-              <img src={image} alt="portfolio image" />
+              <img
+                src={require("../../images/1623869589264.png")}
+                alt="portfolio image"
+              />
             </div>
           </div>
         </div>

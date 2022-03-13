@@ -1,4 +1,5 @@
 import React from "react";
+import { Slide, Zoom } from "react-reveal";
 export const Hero = () => {
   return (
     <>
@@ -12,23 +13,33 @@ export const Hero = () => {
                   js
                 </span>
               </span>
-              <h4 className=" text-xl">Start Your Journey</h4>
-              <h1 className="font-bold text-4xl">
-                With <span className="text-green-400">React</span> JS
-              </h1>
-              <p className="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-                tenetur dolorum nihil iste, laudantium ea!
-              </p>
-              <button className="text-gray-50 p-3 px-5 transition hover:bg-green-500 bg-green-400">
-                Start Journey
-              </button>
+              <Slide bottom cascade duration={1000}>
+                <div className="space-y-4">
+                  <h4 className=" text-xl">Start Your Journey</h4>
+                  <h1 className="font-bold text-4xl">
+                    With
+                    <Zoom duration={500} cascade delay={400}>
+                      <span className="text-green-400">React</span>
+                    </Zoom>
+                    JS
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                    tenetur dolorum nihil iste, laudantium ea!
+                  </p>
+                  <button className="text-gray-50 p-3 px-5 transition hover:bg-green-500 bg-green-400">
+                    Start Journey
+                  </button>
+                </div>
+              </Slide>
             </div>
             <div className="image-info sm:w-1/2 grid place-items-center">
-              <img
-                src={require("../../images/1623869589264.png")}
-                alt="portfolio image"
-              />
+              <Zoom up>
+                <img
+                  src={require("../../images/1623869589264.png")}
+                  alt="portfolio image"
+                />
+              </Zoom>
             </div>
           </div>
         </div>

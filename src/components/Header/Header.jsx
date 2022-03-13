@@ -32,7 +32,7 @@ export const Header = ({ page }) => {
                 Ashik
               </a>
             </div>
-            <div className="times">{date.toLocaleTimeString()}</div>
+            <div className="times">{date.toLocaleTimeString("en-US")}</div>
             <button onClick={() => setIsHide((prev) => !prev)} className="z-20">
               <span className="inline-flex ml-2 w-10 h-10 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

@@ -42,7 +42,7 @@ export const Services = () => {
             - We will <span className="text-green-400">Tech</span> You
           </h1>
           <div className="services-content grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
-            {cardsInfo.map((card) => {
+            {cardsInfo.map((card, i) => {
               return (
                 <>
                   <Card
@@ -50,7 +50,7 @@ export const Services = () => {
                     cardDesc={card.desc}
                     cardSubTitle={card.subtitle}
                     cardTitle={card.title}
-                    cardKey={card.id}
+                    keys={i}
                   />
                 </>
               );

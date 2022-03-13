@@ -3,6 +3,7 @@ import { animated, useTransition } from "react-spring";
 import { Menus } from "./Menus";
 export const Header = ({ page }) => {
   const [isHide, setIsHide] = useState(false);
+  const [date, setDate] = useState(new Date());
   const transition = useTransition(isHide, {
     from: {
       x: -1000,
@@ -15,7 +16,9 @@ export const Header = ({ page }) => {
     enter: { x: 0 },
     leave: { x: -1000 },
   });
-
+  setInterval(() => {
+    setDate(new Date());
+  }, 1000);
   return (
     <>
       <header className="p-3 sticky top-0 z-10 bg-white">
@@ -29,6 +32,7 @@ export const Header = ({ page }) => {
                 Ashik
               </a>
             </div>
+            <div className="times">{date.toLocaleTimeString()}</div>
             <button onClick={() => setIsHide((prev) => !prev)} className="z-20">
               <span className="inline-flex ml-2 w-10 h-10 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

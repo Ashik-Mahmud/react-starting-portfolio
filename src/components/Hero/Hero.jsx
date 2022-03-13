@@ -6,9 +6,9 @@ export const Hero = () => {
         <div className="hero container mx-auto">
           <div className="sm:flex font-poppins items-center justify-between">
             <div className="hero-info space-y-3 sm:w-2/5 text-center sm:text-left mb-10 sm:mb-0">
-              <span class="inline-flex ml-2 h-6 w-6 relative">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span class="relative inline-flex justify-center items-center text-white rounded-full h-6  w-6 bg-green-500 text-sm">
+              <span className="inline-flex ml-2 h-6 w-6 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex justify-center items-center text-white rounded-full h-6  w-6 bg-green-500 text-sm">
                   js
                 </span>
               </span>

@@ -1,9 +1,18 @@
 import React from "react";
 
-export const Card = ({ cardSubTitle, cardTitle, cardImage, cardDesc, key }) => {
+export const Card = ({
+  cardSubTitle,
+  cardTitle,
+  cardImage,
+  cardDesc,
+  cardKey,
+}) => {
   return (
     <>
-      <div className="card shadow-md rounded-md p-3 relative selection:bg-green-400 selection:text-green-50">
+      <div
+        key={cardKey}
+        className="card shadow-md rounded-md p-3 relative selection:bg-green-400 selection:text-green-50"
+      >
         <div className="card-img mb-2 rounded-md overflow-hidden">
           <img
             src={cardImage}

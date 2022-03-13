@@ -50,7 +50,7 @@ export const Services = () => {
                     cardDesc={card.desc}
                     cardSubTitle={card.subtitle}
                     cardTitle={card.title}
-                    keys={card.id}
+                    cardKey={card.id}
                   />
                 </>
               );

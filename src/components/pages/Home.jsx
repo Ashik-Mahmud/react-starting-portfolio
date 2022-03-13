@@ -6,7 +6,7 @@ import { Services } from "../Services/Services";
 export const Home = () => {
   return (
     <>
-      <Header />
+      <Header page={"home"} />
       <Hero />
       <Services />
     </>

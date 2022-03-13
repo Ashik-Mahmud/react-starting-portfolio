@@ -19,7 +19,7 @@ export const Hero = () => {
                   <h1 className="font-bold text-4xl">
                     With
                     <Zoom duration={500} cascade delay={400}>
-                      <span className="text-green-400">React</span>
+                      <span className="text-green-400"> React </span>
                     </Zoom>
                     JS
                   </h1>

@@ -1,20 +1,11 @@
 import React from "react";
 import { Zoom } from "react-reveal";
 
-export const Card = ({
-  cardSubTitle,
-  cardTitle,
-  cardImage,
-  cardDesc,
-  keys,
-}) => {
+export const Card = ({ cardSubTitle, cardTitle, cardImage, cardDesc }) => {
   return (
     <>
       <Zoom duration={2000}>
-        <div
-          key={keys}
-          className="card shadow-md rounded-md p-3 relative selection:bg-green-400 selection:text-green-50"
-        >
+        <div className="card shadow-md rounded-md p-3 relative selection:bg-green-400 selection:text-green-50">
           <div className="card-img mb-2 rounded-md overflow-hidden">
             <img
               src={cardImage}

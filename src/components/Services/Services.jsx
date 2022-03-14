@@ -42,15 +42,15 @@ export const Services = () => {
             - We will <span className="text-green-400">Tech</span> You
           </h1>
           <div className="services-content grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
-            {cardsInfo.map((card, i) => {
+            {cardsInfo.map((card) => {
               return (
                 <>
                   <Card
+                    key={card.id}
                     cardImage={card.image}
                     cardDesc={card.desc}
                     cardSubTitle={card.subtitle}
                     cardTitle={card.title}
-                    keys={i}
                   />
                 </>
               );

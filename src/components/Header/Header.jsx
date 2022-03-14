@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { animated, useTransition } from "react-spring";
 import { Menus } from "./Menus";
-export const Header = ({ page }) => {
+export const Header = () => {
   const [isHide, setIsHide] = useState(false);
   const [date, setDate] = useState(new Date());
   const transition = useTransition(isHide, {
@@ -45,7 +45,7 @@ export const Header = ({ page }) => {
           {transition((style, item) =>
             item ? (
               <animated.div style={style}>
-                <Menus plug={page} />
+                <Menus />
               </animated.div>
             ) : null
           )}
